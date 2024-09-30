@@ -15,7 +15,6 @@ class ProjectController extends Controller
         $projects = Project::orderBy('id')->with('type', 'technologies')->get();
 
         return response()->json($projects);
-        dd($projects);
     }
 
     public function types(){
